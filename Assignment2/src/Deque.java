@@ -11,26 +11,21 @@ import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item> {
 
-    private Deque<Item> deck;
 
-    
+    private int size = 0;
+
+
     // construct an empty deque
     public Deque() {
-        deck = new Deque<Item>();
     }
 
     // is the deque empty?
     public boolean isEmpty() {
-        return deck.size() == 0;
+        return size == 0;
     }
     // return the number of items on the deque
     public int size() {
-        int i = 0;
-        for (Deque<Item> var : deck)
-        {
-            i++;
-        }
-        return i;
+
     }
 
     // add the item to the front
