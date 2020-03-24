@@ -1,7 +1,4 @@
 import java.util.Iterator;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
 import java.lang.*;
 import java.util.NoSuchElementException;
 
@@ -13,12 +10,13 @@ public class Deque<Item> implements Iterable<Item> {
         Node prev;
         Item item;
     }
-    private Node head, tail;
+    private Node head = new Node(), tail = new Node();
     private int size = 0;
 
 
     // construct an empty deque
     public Deque() {
+
     }
 
     // is the deque empty?
@@ -78,6 +76,8 @@ public class Deque<Item> implements Iterable<Item> {
             head = head.next;
             head.prev = null;
         }
+        size--;
+
         return thisItem;
     }
 
@@ -94,6 +94,8 @@ public class Deque<Item> implements Iterable<Item> {
             tail = tail.prev;
             tail.next = null;
         }
+
+        size--;
         return thisItem;
     }
 
@@ -107,7 +109,7 @@ public class Deque<Item> implements Iterable<Item> {
 
         @Override
         public boolean hasNext() {
-            return current != null && current.next != null;
+            return current != null;
         }
 
         public void remove(){
@@ -127,7 +129,6 @@ public class Deque<Item> implements Iterable<Item> {
 
     // unit testing (required)
     public static void main(String[] args){
-
     }
 
 
