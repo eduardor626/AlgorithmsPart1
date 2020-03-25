@@ -1,12 +1,11 @@
 import java.util.Iterator;
 import edu.princeton.cs.algs4.StdRandom;
-import java.lang.*;
 import java.util.NoSuchElementException;
 
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
-    int N = 0;
+    private int N = 0;
     private Item[] a = (Item[]) new Object[10];
 
 

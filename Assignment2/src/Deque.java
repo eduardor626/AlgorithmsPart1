@@ -1,5 +1,4 @@
 import java.util.Iterator;
-import java.lang.*;
 import java.util.NoSuchElementException;
 
 
@@ -31,6 +30,9 @@ public class Deque<Item> implements Iterable<Item> {
 
     // add the item to the front
     public void addFirst(Item item) {
+        if(item == null){
+            throw new IllegalArgumentException();
+        }
         Node newItem = new Node();
         newItem.item = item;
         if (!isEmpty()) {
