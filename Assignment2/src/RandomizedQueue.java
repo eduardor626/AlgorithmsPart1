@@ -86,14 +86,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
           for(int i = 0; i < N; i++){
               b[i] = a[i];
           }
-          StdRandom.shuffle(b);
+          StdRandom.shuffle(b,0,N);
         }
         public boolean hasNext() { return i > 0; }
         public Item next() {
             if(!hasNext()){
                 throw new NoSuchElementException();
             }
-            return a[--i];
+            return b[--i];
         }
         public void remove() {
             new UnsupportedOperationException();
