@@ -4,11 +4,14 @@ import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item> {
 
+    //Create a Node with next,prev pointers and data
     private class Node{
         Node next;
         Node prev;
         Item item;
     }
+
+
     private Node head = new Node(), tail = new Node();
     private int size = 0;
 
@@ -129,7 +132,6 @@ public class Deque<Item> implements Iterable<Item> {
             }
         }
 
-    // unit testing (required)
     public static void main(String[] args){
     }
 
